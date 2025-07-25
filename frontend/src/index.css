@@ -1,0 +1,230 @@
+/* Import Google Fonts - Roboto */
+@import url('https://fonts.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Import Tailwind CSS */
+@import "tailwindcss";
+
+/* Base Styles */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box; /* Apply box-sizing globally for consistent layout */
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: #181818;
+  margin: 0; /* Ensure no default body margin */
+  padding: 0; /* Ensure no default body padding */
+}
+
+/* Swiper Container Styling */
+.mySwiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 60px; /* Increased padding-bottom to move pagination lower */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* Essential for absolutely positioned children */
+  box-sizing: border-box; /* Important for accurate width calculations */
+}
+
+/* Swiper Slide Styling (Default: 6 slides for very large screens) */
+.mySwiper .swiper-slide {
+  /* Calculation for 6 slides per row with 10px spaceBetween:
+     (100% - (5 * 10px)) / 6 = (100% - 50px) / 6 */
+  width: calc((100% - 50px) / 6) !important;
+  height: auto; /* Let content define height */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box; /* Ensure this is set here too */
+  padding-bottom: 10px; /* Add some padding at the bottom for title/rating */
+}
+
+/* Card Image Styling */
+.swiper-slide img {
+  border-radius: 10px; /* Rounded corners for the images */
+  width: fill;
+  height: 200px; /* Explicit height (Tailwind's h-44 is 11rem = 176px) for consistency */
+  object-fit: cover; /* Ensures images cover the area without distorting */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  display: block; /* Ensures image behaves as block for layout */
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.03); /* Slightly enlarge image on hover */
+}
+
+/* Link Wrapper Styling (for card area) */
+.swiper-slide a {
+  display: block; /* Ensure the link takes up the full card area */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color from parent */
+  position: relative; /* For absolute positioning of rating badge */
+  overflow: hidden; /* Hide anything overflowing rounded corners or image scaling */
+  width: 100%; /* Ensure link takes full width of slide */
+}
+
+/* Card Title Styling */
+.swiper-slide .card-title {
+  font-size: 1.2rem; /* Slightly smaller font size */
+  font-weight: 500; /* Medium font weight */
+  color: #e0e0e0; /* Lighter white for titles */
+  text-align: center;
+  padding-top: 8px; /* Space above title */
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  width: 100%; /* Ensure title takes full width */
+}
+
+/* Rating Badge Styling */
+.swiper-slide .rating-badge {
+  position: absolute;
+  top: 10px; /* Distance from top of the image */
+  right: 10px; /* Distance from right of the image */
+  background-color: rgba(0, 0, 0, 0.618); /* Semi-transparent black background */
+  color: #ffffff; /* White text */
+  padding: 4px 8px;
+  border-radius: 5px; /* Slightly rounded badge */
+  font-size: 0.8rem; /* Smaller font for rating */
+  font-weight: bold;
+  display: flex; /* Use flexbox for centering star and number */
+  align-items: center;
+  gap: 4px; /* Space between star and number */
+  z-index: 2; /* Ensure it's above the image */
+}
+
+/* Star icon within rating badge */
+.rating-badge span.star {
+  color: #FFD700; /* Gold color for the star */
+}
+
+/* Pagination Container Styling */
+.mySwiper .swiper-pagination-bullets {
+  bottom: 0px !important; /* Forces it to be 0px from the bottom of .mySwiper */
+  top: auto !important; /* Ensure it's not trying to position from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  width: auto !important; /* Let content define width */
+  z-index: 10; /* Ensure pagination is above other content */
+  display: flex; /* Use flexbox for better alignment of bullets */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual Pagination Dot Styling */
+.mySwiper .swiper-pagination-bullet {
+  background-color: #ffffff; /* Make dots white */
+  opacity: 0.7; /* Slightly transparent when inactive */
+  width: 10px; /* Default size */
+  height: 10px; /* Default size */
+  margin: 0 4px; /* Space between dots */
+  border-radius: 50%; /* Make them circular */
+  display: inline-block; /* Ensure they behave like inline blocks for margin */
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Smooth transition for active state */
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #ffffff; /* Active dot is also white */
+  opacity: 1; /* Fully opaque when active */
+}
+
+/* Navigation Arrows Styling */
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  color: #ff1616; /* White arrows */
+  width: 40px; /* Size of the circular button */
+  height: 60px; /* Size of the circular button */
+  background-color: rgba(255, 255, 255, 0.608); /* Soft transparent white background */
+  border-radius: 20%; /* Make them perfectly circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  z-index: 10; /* Ensure arrows are above slides and pagination */
+
+  /* Position them vertically centered within the Swiper container height */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mySwiper .swiper-button-prev:hover,
+.mySwiper .swiper-button-next:hover {
+  background-color: rgb(9, 248, 88); /* More visible on hover */
+  transform: translateY(-50%) scale(1.1); /* Slightly larger on hover */
+}
+
+/* Ensure the arrow icon itself is visible and sized correctly */
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+  font-size: 50px; /* Adjust the size of the arrow icon within the button */
+  font-weight: bold;
+}
+
+.mySwiper .swiper-button-prev {
+  left: 10px; /* Distance from the left edge of the Swiper container */
+}
+
+.mySwiper .swiper-button-next {
+  right: 10px; /* Distance from the right edge of the Swiper container */
+}
+
+
+/* Responsive adjustments for slides per row */
+
+/* Screens larger than 1440px (large desktops): 6 slides per row */
+/* This is handled by the base .swiper-slide rule above. */
+
+@media (max-width: 1440px) {
+  .mySwiper .swiper-slide {
+    /* For screens up to 1440px, continue to show 6 slides (adjust if you want 5 here) */
+    width: calc((100% - 50px) / 6) !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .mySwiper .swiper-slide {
+    /* For screens up to 1280px (e.g., standard desktops), show 5 slides */
+    /* Calculation for 5 slides: (100% - (4 * 10px)) / 5 = (100% - 40px) / 5 */
+    width: calc((100% - 40px) / 5) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mySwiper .swiper-slide {
+    /* For screens up to 1024px (e.g., tablets in landscape), show 4 slides */
+    /* Calculation: (100% - (3 * 10px)) / 4 = (100% - 30px) / 4 */
+    width: calc((100% - 30px) / 4) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mySwiper .swiper-slide {
+    /* For screens up to 768px (e.g., tablets in portrait), show 3 slides */
+    /* Calculation: (100% - (2 * 10px)) / 3 = (100% - 20px) / 3 */
+    width: calc((100% - 20px) / 3) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .mySwiper .swiper-slide {
+    /* For screens up to 640px (e.g., larger phones in landscape), show 2 slides */
+    /* Calculation: (100% - (1 * 10px)) / 2 = (100% - 10px) / 2 */
+    width: calc((100% - 10px) / 2) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mySwiper .swiper-slide {
+    /* For screens up to 480px (e.g., smaller phones), show 1 slide */
+    width: calc(100% - 0px) !important; /* No spaceBetween when only one slide */
+  }
+  /* Optionally hide arrows on very small screens if they crowd the layout */
+  .mySwiper .swiper-button-prev,
+  .mySwiper .swiper-button-next {
+     display: none;
+  }
+}
