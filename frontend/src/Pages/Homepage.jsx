@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../components/hero'
+import Hero from '../components/Hero'
 import CardList from '../components/CardList'
 import Footer from '../components/Footer'
 import CardList2 from '../components/CardList2'
