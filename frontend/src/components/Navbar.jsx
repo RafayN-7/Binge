@@ -58,8 +58,7 @@ const Navbar = () => {
                 onClick={handleSearch}
                 />
             </div>
-           {/* <button className='bg-[#e50914] px-5 py-2 text-white cursor-pointer'>Get AI Movie Picks</button>
-            <button className="border border-[#333333] py-2 px-4 cursor-pointer">Sign In</button> */}
+
         </div>
     </nav>
   )
