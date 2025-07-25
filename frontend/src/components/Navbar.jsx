@@ -37,13 +37,6 @@ const Navbar = () => {
             <Link to={"TvSeries"}>
             <li className='cursor-pointer hover:text-[#e50914]'>TV shows</li>
             </Link>
-            
-            {/*
-            <li className='cursor-pointer hover:text-[#e50914]'>Anime</li>
-            <li className='cursor-pointer hover:text-[#e50914]'>Games</li>
-            <li className='cursor-pointer hover:text-[#e50914]'>Upcoming</li>
-            <li className='cursor-pointer hover:text-[#e50914]'>New & Popular</li>
-              */}
               
         </ul>
 
