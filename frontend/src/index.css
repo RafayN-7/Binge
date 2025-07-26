@@ -220,7 +220,7 @@ body {
 @media (max-width: 480px) {
   .mySwiper .swiper-slide {
     /* For screens up to 480px (e.g., smaller phones), show 1 slide */
-    width: calc(80% - 0px) !important; /* No spaceBetween when only one slide */
+    width: calc(90% - 0px) !important; /* No spaceBetween when only one slide */
   }
   /* Optionally hide arrows on very small screens if they crowd the layout */
 
