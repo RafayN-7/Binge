@@ -107,7 +107,7 @@ if (!movie){
 
                     <div className="mt-6 flex ml-10">
                 <Link to= {`/videoplayer3/${id}`} 
-                target="_blank" rel="noopener noreferrer">
+                >
                     <h3 className="font-semibold ml-10">Option A:</h3>
             <button className='flex justify-center items-center bg-[#e50914] text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
                 <Play className='mr-2 w-4 h-5 md:w-5 md:h-5 ' />Watch Now</button>
@@ -116,7 +116,7 @@ if (!movie){
 
                     
                 <Link to= {`/videoplayer4/${id}`} 
-                target="_blank" rel="noopener noreferrer">
+                >
                     <h3 className="font-semibold ml-20">Option B:</h3>
             <button className='flex justify-center items-center bg-[#0d6efd] ml-20 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
                 <Play className='mr-2 w-4 h-5 md:w-5 md:h-5 ' />Watch Now</button>
