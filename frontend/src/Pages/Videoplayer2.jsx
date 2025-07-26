@@ -27,4 +27,4 @@ function Videoplayer2 () {
 }
 
 
-export default Videoplayer2
+export default Videoplayer2;

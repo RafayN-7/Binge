@@ -27,4 +27,4 @@ function Videoplayer3 () {
   );
 }
 
-export default Videoplayer3
+export default Videoplayer3;
