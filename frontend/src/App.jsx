@@ -28,16 +28,11 @@ export const App = () => {
         <Route path={"/tv/:id"} element= {<TvShowPage/>} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/Videoplayer/:id" element={<Videoplayer/>} />
-        <Route path="/Videoplayer/:id" element={<Videoplayer2/>} />
-        <Route path="/Videoplayer/:id" element={<Videoplayer3/>} />
-        <Route path="/Videoplayer/:id" element={<Videoplayer4/>} />
-
+        <Route path="/Videoplayer2/:id" element={<Videoplayer2/>} />
+        <Route path="/Videoplayer3/:id" element={<Videoplayer3/>} />
+        <Route path="/Videoplayer4/:id" element={<Videoplayer4/>} />
 
        </Routes>  
-
-
-
-
     </div>
  
   );
