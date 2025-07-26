@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar";
 import Homepage from "./Pages/Homepage";
 import Moviepage from "./Pages/Moviepage";
 import "video.js/dist/video-js.css"; 
-import videojs from "video.js";
-import { useState, useEffect, useRef } from "react";
 import Movies from "./Pages/Movies";
 import TvSeries from "./Pages/TvSeries";
 import TvShowPage from "./Pages/TvShowPage";
