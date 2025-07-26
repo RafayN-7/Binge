@@ -73,7 +73,7 @@ if (!movie){
                         </span>
                     ))}
                 </div >
-                <p className="max-w-2xl text-gray-200 ">{movie.overview}</p>
+                <p className="max-w-2xl text-gray-200 hidden">{movie.overview}</p>
 
 
                     <div className="mt-6 flex ml-10">
