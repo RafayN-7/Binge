@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4 relative">
 
             <div className="relative md:inline-flex">
-                <input type="text" className="bg-[#333333] px-4 py-2 rounded-full min-w-72  pr-10 outline-none" 
+                <input type="text" className="bg-[#333333] px-4 py-2 rounded-full min-w-40  pr-10 outline-none" 
                 placeholder="Search..." 
                 value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
