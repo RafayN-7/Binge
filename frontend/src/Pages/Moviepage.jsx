@@ -86,7 +86,7 @@ if (!movie){
                 
 
                     
-                <Link to= {`/videoplayer2/${id}`}
+                <Link to= {`/videoplayer/${id}`}
                 target="_blank">
                     <h3 className="font-semibold ml-10">Option B:</h3>
             <button className='flex justify-center items-center bg-[#0d6efd] ml-5 mb-5 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
