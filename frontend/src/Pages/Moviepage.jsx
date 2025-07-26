@@ -175,8 +175,9 @@ if (!movie){
                             />
                             <div className="p-2">
                                 <h3 className="text-1xl font-semibold">{rec.title}
-                                <span className="text-xs text-gray-400 px-2">({rec.release_date?.slice(0, 4)})</span>
+                                
                                 </h3>
+                                <span className="text-xs text-gray-400">({rec.release_date?.slice(0, 4)})</span>
                                 <span className="text-sm ">⭐ {movie.vote_average?.toFixed(1)}</span>
                                 
                                 
