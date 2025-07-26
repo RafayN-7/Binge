@@ -73,14 +73,14 @@ if (!movie){
                         </span>
                     ))}
                 </div >
-                <p className="max-w-2xl text-gray-200 hidden">{movie.overview}</p>
+                <p className="max-w-2xl text-gray-200 hidden ">{movie.overview}</p>
 
 
-                    <div className="mt-6 flex ml-10">
+                    <div className="mt-6 flex ml-5">
                 <Link to= {`https://player.videasy.net/movie/${id}`}
                 target="_blank">
-                    <h3 className="font-semibold ml-10">Option A:</h3>
-            <button className='flex justify-center items-center bg-[#e50914] text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
+                    <h3 className="font-semibold ml-5">Option A:</h3>
+            <button className='flex justify-center items-center bg-[#e50914] ml-5 mb-5 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
                 <Play className='mr-2 w-4 h-5 md:w-5 md:h-5 ' />Watch Now</button>
             </Link>
                 
@@ -88,8 +88,8 @@ if (!movie){
                     
                 <Link to= {`https://vidsrc.xyz/embed/${id}`}
                 target="_blank">
-                    <h3 className="font-semibold ml-30">Option B:</h3>
-            <button className='flex justify-center items-center bg-[#0d6efd] ml-20 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
+                    <h3 className="font-semibold ml-10">Option B:</h3>
+            <button className='flex justify-center items-center bg-[#0d6efd] ml-5 mb-5 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
                 <Play className='mr-2 w-4 h-5 md:w-5 md:h-5 ' />Watch Now</button>
             </Link>
                     </div>  
