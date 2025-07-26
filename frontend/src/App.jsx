@@ -1,14 +1,11 @@
 import { Route, Routes } from "react-router";
 import Navbar from "./components/Navbar";
 import Homepage from "./Pages/Homepage";
-import Videoplayer4 from "./Pages/Videoplayer4";
 import Moviepage from "./Pages/Moviepage";
-import Videoplayer3 from "./Pages/Videoplayer3";
 import "video.js/dist/video-js.css"; 
 import videojs from "video.js";
 import { useState, useEffect, useRef } from "react";
 import Movies from "./Pages/Movies";
-import Videoplayer2 from "./Pages/Videoplayer2";
 import TvSeries from "./Pages/TvSeries";
 import TvShowPage from "./Pages/TvShowPage";
 import SearchPage from "./Pages/SearchPage";
