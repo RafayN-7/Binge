@@ -223,8 +223,5 @@ body {
     width: calc(80% - 0px) !important; /* No spaceBetween when only one slide */
   }
   /* Optionally hide arrows on very small screens if they crowd the layout */
-  .mySwiper .swiper-button-prev,
-  .mySwiper .swiper-button-next {
-     display: none;
-  }
+
 }
