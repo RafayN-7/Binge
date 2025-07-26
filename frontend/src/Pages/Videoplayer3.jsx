@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router'; // Import useParams to get the ID from the URL
 
-function Videoplayer() {
+function Videoplayer3 () {
+
   const { id } = useParams(); // Get the 'id' parameter from the URL
   // Construct the video source URL dynamically using the obtained ID
   // Assuming 'https://player.videasy.net/embed/' is the correct base for embedding
-  const videoSource = `https://player.videasy.net/movie/${id}`;
+  const videoSource = `https://player.videasy.net/tv/${id}`;
 
   return (
     // Centering the video player on the screen with a dark background
@@ -26,4 +27,4 @@ function Videoplayer() {
   );
 }
 
-export default Videoplayer;
+export default Videoplayer3

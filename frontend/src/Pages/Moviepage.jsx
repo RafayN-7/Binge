@@ -55,7 +55,7 @@ if (!movie){
         backgroundSize: "cover",
         backgroundPosition: "center"}
         }>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent"></div>
 
             <div className="relative z-10 flex items-end p-8 gap-8">
                 <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} className="rounded-lg shadow-lg w-48 hidden md:block" />
@@ -73,11 +73,11 @@ if (!movie){
                         </span>
                     ))}
                 </div >
-                <p className="max-w-2xl text-gray-200 hidden ">{movie.overview}</p>
+                <p className="max-w-2xl text-gray-200 hidden md:block">{movie.overview}</p>
 
 
                     <div className="mt-6 flex ml-5">
-                <Link to= {`https://player.videasy.net/movie/${id}`}
+                <Link to= {`/videoplayer/${id}`}
                 target="_blank">
                     <h3 className="font-semibold ml-5">Option A:</h3>
             <button className='flex justify-center items-center bg-[#e50914] ml-5 mb-5 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
@@ -86,7 +86,7 @@ if (!movie){
                 
 
                     
-                <Link to= {`https://vidsrc.xyz/embed/${id}`}
+                <Link to= {`/videoplayer2/${id}`}
                 target="_blank">
                     <h3 className="font-semibold ml-10">Option B:</h3>
             <button className='flex justify-center items-center bg-[#0d6efd] ml-5 mb-5 text-white py-3 px-8 rounded-full cursor-pointer text-sm md:text-base mt-2 md:mt-4'>
